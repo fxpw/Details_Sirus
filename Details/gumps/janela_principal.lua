@@ -2112,22 +2112,24 @@ local icon_frame_on_enter = function(self)
             end]]
 			-- TEMP
 			local got_info
-			if(ilvl) then
-				local ilvla = ItemLevelMixIn:GetItemLevel(actor.serial)
-				if(ilvla)then
-					GameCooltip:AddLine("ILVL" .. ":" , ilvla and "|T:" .. 24 .. ":" .. 24 ..":0:0:64:64:4:60:4:60|t" .. _math_floor(ilvl.ilvl) or "|T:" .. 24 .. ":" .. 24 ..":0:0:64:64:4:60:4:60|t ??") --> Loc from GlobalStrings.lua
-					GameCooltip:AddIcon([[]], 1, 1, 1, 20)
-					_detalhes:AddTooltipBackgroundStatusbar()
-					got_info = true
-
-				end
-			else
-				local ilvla = ItemLevelMixIn:GetItemLevel(actor.serial)
-				if(ilvla)then
-					GameCooltip:AddLine("ILVL" .. ":" , ilvla)
-					GameCooltip:AddIcon([[]], 1, 1, 1, 20)
-					_detalhes:AddTooltipBackgroundStatusbar()
-					got_info = true
+			if(actor.serial)then
+				if(ilvl) then
+					local ilvla = ItemLevelMixIn:GetItemLevel(actor.serial)
+					if(ilvla)then
+						GameCooltip:AddLine("ILVL" .. ":" , ilvla and "|T:" .. 24 .. ":" .. 24 ..":0:0:64:64:4:60:4:60|t" .. _math_floor(ilvl.ilvl) or "|T:" .. 24 .. ":" .. 24 ..":0:0:64:64:4:60:4:60|t ??") --> Loc from GlobalStrings.lua
+						GameCooltip:AddIcon([[]], 1, 1, 1, 20)
+						_detalhes:AddTooltipBackgroundStatusbar()
+						got_info = true
+					end
+				else
+					local ilvla = ItemLevelMixIn:GetItemLevel(actor.serial)
+					if(ilvla)then
+						GameCooltip:AddLine("ILVL" .. ":" , ilvla)
+						GameCooltip:AddIcon([[]], 1, 1, 1, 20)
+						_detalhes:AddTooltipBackgroundStatusbar()
+						got_info = true
+					end
+					
 				end
 			end
 
