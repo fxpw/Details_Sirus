@@ -174,7 +174,7 @@ do
 		-- Elemental Shaman:
 		-- [61882] = 262, -- Earthquake
 		[60188] = 262, -- Elemental Fury
-		--[29000] = 262, -- Elemental Reach --removed from the game
+		[320465] = 262, -- t4 spell
 		--[62099] = 262, -- Shamanism --removed from the game
 		-- [51490] = 262, -- Thunderstorm, Rank 1
 		-- [59156] = 262, -- Thunderstorm, Rank 2
