@@ -823,7 +823,7 @@ function _detalhes:SairDoCombate(bossKilled, from_encounter_end)
 		if _detalhes.shareData then
 			local zipData = Details:CompressData(_detalhes.tabela_vigente, "comm")
 			if zipData then
-				print("has zip data")
+				-- print("has zip data")
 			end
 		end
 	else
@@ -1677,6 +1677,8 @@ local tableModelList = {
 	["dracthyrdragonfemale3.m2"] = true,
 	["skeleton_hd.m2"] = true,
 	["taurenmale_hd.m2"] = true,
+	["gnomemale_hd.m2"] = true,
+	["gnomefemale_hd.m2"] = true,
 }
 local str
 local pattern = "[^\\]*%.m2$"
@@ -1696,19 +1698,21 @@ local function UpdateModelFrame(frame,unit)
 	if unit then
 		isAvailable = UnitIsConnected(unit) and UnitIsVisible(unit)
 	end
-	element:SetCamera(0)
+	-- element:SetCamera(0)
 	if unit and (element:IsObjectType('Model')) then
 		if (not isAvailable) then
 			GameCooltipFrame1.model:Show()
 			-- element:ClearModel()
 			element:SetModelScale(4.25)
+			element:SetCamera(0)
 			element:SetPosition(0, 0, -1.5)
 			element:SetModel([[Interface\Buttons\TalkToMeQuestionMark.m2]])
 		else
 			GameCooltipFrame1.model:Show()
 			element:ClearModel()
 			element:SetUnit(unit)
-			element:SetModelScale(1)
+			element:SetModelScale(4.25)
+			element:SetCamera(0)
 			element:SetPosition(0, 0, 0)
 			if element:IsObjectType("Model") then
 				str = element:GetModel()
