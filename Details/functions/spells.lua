@@ -1222,9 +1222,7 @@ do
 		[371908] = 30,
 		[371907] = 30,
 		[322293] = 30,
-
-
-
+		[381593] = 10,
 
 	}
 	-- /run for i = 1,30 do local name, rank, icon, count, dbf, dur, expt, caster, issteal,scons, spellId = UnitBuff("player",i) print(name, rank, spellId) end
