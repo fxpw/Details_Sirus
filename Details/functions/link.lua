@@ -2154,12 +2154,9 @@ if DeathRecapMixin then
 		_detalhes.OpenDetailsDeathRecap(RecapID)
 	end)
 
-	hooksecurefunc(DeathRecapMixin, "ConvertStringToDeathRecapData", function(_, deathRecapDataString )
-		local splitData 		= C_Split(deathRecapDataString, "|")
-		local splitRecapData 	= C_Split(splitData[4], ":")
+	hooksecurefunc(DeathRecapMixin, "OpenDeathRecap", function(_, deathRecapDataString, recapID)
 
-		local deathRecapID 	= tonumber(splitData[1])
-		_detalhes.OpenDetailsDeathRecap(deathRecapID)
+		_detalhes.OpenDetailsDeathRecap(recapID)
 	end)
 end
 
