@@ -1,30 +1,30 @@
-local oldGetInstanceDifficulty = GetInstanceDifficulty
-function GetInstanceDifficulty()
-	local diff = oldGetInstanceDifficulty()
-	if diff == 1 then
-		local _, _, difficulty, _, maxPlayers = GetInstanceInfo()
-		if difficulty == 1 and maxPlayers == 25 then
-			diff = 2
-		end
-	end
-	return diff
-end
+-- local oldGetInstanceDifficulty = GetInstanceDifficulty
+-- function GetInstanceDifficulty()
+-- 	local diff = oldGetInstanceDifficulty()
+-- 	if diff == 1 then
+-- 		local _, _, difficulty, _, maxPlayers = GetInstanceInfo()
+-- 		if difficulty == 1 and maxPlayers == 25 then
+-- 			diff = 2
+-- 		end
+-- 	end
+-- 	return diff
+-- end
 
-function IsInGroup()
-	return (GetNumRaidMembers() == 0 and GetNumPartyMembers() > 0)
-end
+-- function IsInGroup()
+-- 	return (GetNumRaidMembers() == 0 and GetNumPartyMembers() > 0)
+-- end
 
-function IsInRaid()
-	return GetNumRaidMembers() > 0
-end
+-- function IsInRaid()
+-- 	return GetNumRaidMembers() > 0
+-- end
 
-function GetNumSubgroupMembers()
-	return GetNumPartyMembers()
-end
+-- function GetNumSubgroupMembers()
+-- 	return GetNumPartyMembers()
+-- end
 
-function GetNumGroupMembers()
-	return GetNumRaidMembers()
-end
+-- function GetNumGroupMembers()
+-- 	return GetNumRaidMembers()
+-- end
 
 --[[
 local oldGetCurrentMapAreaID = GetCurrentMapAreaID()
