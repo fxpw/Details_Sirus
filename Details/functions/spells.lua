@@ -1260,6 +1260,7 @@ do
 		[381855] = 15, -- resto druid, Крепкость дуба
 
 		[383168] = 10, -- t6, Природный щит
+		[383064] = 10, -- t6, Духовный щит
 
 	}
 	-- /run for i = 1,30 do local name, rank, icon, count, dbf, dur, expt, caster, issteal,scons, spellId = UnitBuff("player",i) print(name, rank, spellId) end
