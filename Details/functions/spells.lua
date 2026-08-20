@@ -1263,6 +1263,7 @@ do
 		[383064] = 10, -- t6, Духовный щит
 
 		[383034] = 10, -- t6, Нечестивая оболочка
+		[382979] = 10, -- t6, Защита небес
 
 	}
 	-- /run for i = 1,30 do local name, rank, icon, count, dbf, dur, expt, caster, issteal,scons, spellId = UnitBuff("player",i) print(name, rank, spellId) end
